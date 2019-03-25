@@ -1,0 +1,76 @@
+@import '../../assets/styles/_resources.scss';
+
+.Tabs {
+    display: flex;
+    border-bottom: 2px solid $brand-red;
+
+    &-heading {
+        display: flex;
+        flex-grow: 1;
+
+        > * + * {
+            margin-left: .5rem;
+        }
+
+        &--sub {
+            align-self: flex-end;
+        }
+    }
+
+    &-headingContent {
+        font-weight: 700;
+        margin-bottom: .5rem;
+
+        .Tabs-heading--sub & {
+            font-family: $ff-body;
+            font-size: 1rem;
+            font-weight: $fw-bold;
+        }
+    }
+
+    &-item {
+        border: 2px solid $brand-grey;
+        border-bottom: none;
+        background: $brand-grey;
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+        color: $brand-white;
+        font-size: .8rem;
+        position: relative;
+        margin-right: .6rem;
+        padding: .6rem 2rem .4rem 1rem;
+
+        @media(min-width: $desktop-sm) {
+            min-width: 8rem;
+        }
+
+        &.is-active {
+            border-color: $brand-red;
+            background: $brand-white;
+            color: $brand-black;
+
+            &:after {
+                content: '';
+                width: 100%;
+                height: 2px;
+                position: absolute;
+                bottom: -2px;
+                left: 0;
+                background: $brand-white;
+            }
+        }
+    }
+
+    &-button {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.ButtonList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}

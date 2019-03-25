@@ -1,0 +1,44 @@
+<div class="Tabs u-mb1">
+    <div class="Tabs-heading" [ngClass]="subHeading ? 'Tabs-heading--sub' : ''">
+        <h2 class="Tabs-headingContent" *ngIf="!subHeading">{{heading}}</h2>
+        <h3 class="Tabs-headingContent" *ngIf="subHeading">{{heading}}</h3>
+        <ul class="ButtonList">
+            <li *ngFor="let button of (buttons | buttonPosition: 'heading')" class="Tabs-headingButton">
+                <button class="Button-action Button-action--add"
+                        (click)="buttonClick(button.clickEvt)"
+                        tooltip
+                        [tooltipPlacement]="'top'"
+                        [tooltipType]="'tooltip'"
+                        [tooltipTitle]="button.title"
+                        [ngClass]="button.transparent == true ? 'Button-action--transparentBg' : ''"
+                        [tooltipShowCaret]="true">
+                    <span class="u-srt">{{button.title}}</span>
+                    <span class="Button-actionIcon Button-actionIcon--{{button.icon}}"></span>
+                </button>
+            </li>
+        </ul>
+    </div>
+    <!--<h2 class="Tabs-heading" *ngIf="!subHeading">{{heading}}</h2>
+    <h3 class="Tabs-heading Tabs-heading--sub" *ngIf="subHeading">{{heading}}</h3>-->
+    <ul class="Tabs-list u-ul-unset u-list-inline">
+        <li *ngFor="let tab of tabs"
+            (click)="selectTab(tab)"
+            [class.is-active]="tab.active" class="Tabs-item">
+            {{tab.title}}
+        </li>
+        <li *ngFor="let button of (buttons | buttonPosition: 'tab')" class="Tabs-button">
+            <button class="Button-action Button-action--add"
+                    (click)="buttonClick(button.clickEvt)"
+                    tooltip
+                    [tooltipPlacement]="'top'"
+                    [tooltipType]="'tooltip'"
+                    [tooltipTitle]="button.title"
+                    [tooltipShowCaret]="true">
+                <span class="u-srt">{{button.title}}</span>
+                <span class="Button-actionIcon Button-actionIcon--{{button.icon}}"></span>
+            </button>
+        </li>
+    </ul>
+</div>
+
+<ng-content></ng-content>
