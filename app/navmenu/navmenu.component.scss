@@ -1,0 +1,139 @@
+@import "../../assets/styles/_resources.scss";
+
+$icon-size: 60px;
+
+.Nav {
+    background: $brand-bg;
+    color: $brand-white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    transition: width .25s ease;
+
+    @media(max-width: $tablet) {
+        width: 100vw;
+        overflow: hidden;
+    }
+
+    @media (min-width: $desktop-sm) {
+        height: 100%;
+        width: 145px;
+        flex-direction: column;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &[aria-expanded="false"] {
+        @media (min-width: $desktop-sm) {
+            width: $icon-size;
+            transition: width .25s ease;
+        }
+    }
+
+    &-list {
+        display: flex;
+
+        @media(max-width: $tablet) {
+            overflow-y: hidden;
+            overflow-x: scroll;
+        }
+
+        @media (min-width: $desktop-sm) {
+            flex-direction: column;
+        }
+
+    }
+
+    &-link {
+        display: flex;
+        flex: 1;
+        align-items: center;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        transition: background .2s ease;
+
+        @media (min-width: $desktop-sm) {
+            flex-direction: row;
+        }
+
+        &--active {
+            background: $brand-bg-highlight;
+        }
+
+        &:hover {
+            background: $brand-red;
+        }
+
+        &:focus {
+            outline: $brand-red auto 2px;
+        }
+    }
+
+    &-label {
+        color: $brand-grey-mid;
+        font-size: .7rem;
+        padding: 0 0 .5rem 0;
+        flex: 1;
+        transition: opacity .2s ease;
+
+        @media (min-width: $desktop-sm) {
+            padding: .5rem 0 .5rem 1rem;
+        }
+
+        .Nav[aria-expanded="false"] & {
+            opacity: 0;
+            visibility: hidden;
+            width: 0;
+            height: 0;
+            padding: 0;
+            position: absolute;
+        }
+
+        .Nav-link:hover &,
+        .Nav-link--active & {
+            color: #fff;
+        }
+    }
+
+    &-icon {
+        display: block;
+        height: $icon-size;
+        width: $icon-size;
+        background-position: center center;
+        background-repeat: no-repeat;
+
+        &--home {
+            background-image: url('../../assets/images/ico-home.svg');
+        }
+
+        &--clients {
+            background-image: url('../../assets/images/ico-clients.svg');
+        }
+
+        &--actions {
+            background-image: url('../../assets/images/ico-actions.svg');
+        }
+
+        &--jobs {
+            background-image: url('../../assets/images/ico-jobs.svg');
+        }
+
+        &--meetings {
+            background-image: url('../../assets/images/ico-meetings.svg');
+        }
+
+        &--holidays {
+            background-image: url('../../assets/images/ico-holiday.svg');
+        }
+
+        &--quotes {
+            background-image: url('../../assets/images/ico-quotes.svg');
+        }
+
+        &--search {
+            background-image: url('../../assets/images/ico-search.svg');
+        }
+    }
+}

@@ -1,0 +1,29 @@
+.Icon {
+    @include size(.8rem);
+    display: inline-block;
+
+
+    &--sort {
+        background: url('/assets/images/ico-sort.svg') no-repeat;
+        background-size: 100% 100%;
+        opacity: .35;
+    }
+
+    &--sortOrderAsc {
+        // Ascending
+        background: url('/assets/images/ico-sortTriangle.svg') no-repeat;
+        background-position: center center;
+        background-size: 70% 70%;
+        transform: rotate(180deg);
+        transform-origin: center center;
+        opacity: .35;
+    }
+
+    &--sortOrderDes {
+        // Descending
+        background: url('/assets/images/ico-sortTriangle.svg') no-repeat;
+        background-position: center center;
+        background-size: 70% 70%;
+        opacity: .35;
+    }
+}

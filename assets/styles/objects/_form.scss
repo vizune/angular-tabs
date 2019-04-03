@@ -1,0 +1,79 @@
+.Form {
+    &-heading {
+        font-family: $ff-body;
+        font-size: $fs-h3;
+        margin: 0 0 1.5rem;
+    }
+
+    &-section {
+        background: $brand-black;
+        border-radius: 5px;
+        color: $brand-white;
+        padding: .75rem;
+    }
+
+    &-row {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    &-field {
+        display: flex;
+        align-items: center;
+        position: relative;
+        margin-bottom: 1rem;
+
+        .Form-row > & {
+            flex: 1 1 100%;
+
+            @include breakpoint($desktop) {
+                flex-basis: 0%;
+
+                + .Form-field {
+                    margin-left: 1.5rem;
+                }
+            }
+        }
+    }
+
+    &-control {
+        position: relative;
+        display: flex;
+        flex: 1;
+
+        .Form-label + & {
+            margin-left: .8rem;
+        }
+    }
+
+    &-label {
+        font-size: 0.8rem;
+        flex-shrink: 0;
+        margin-right: .5rem;
+    }
+
+    &-error {
+        font-size: .7rem;
+        color: $brand-red;
+        margin-top: .15rem;
+    }
+
+    &-actions {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        > * + * {
+            margin-left: .5rem;
+        }
+    }
+}
+
+.ng-valid[required], .ng-valid.required {
+    border-left: 5px solid $brand-green; /* green */
+}
+
+.ng-invalid:not(form) {
+    border-left: 5px solid $brand-red; /* red */
+}

@@ -1,0 +1,25 @@
+@mixin arrow($size: 8px, $thickness: 1px, $direction: 'right') {
+    display: inline-block;
+    //@include size($size);
+    width: $size;
+    height: $size;
+    border: $thickness solid;
+
+    @if ( $direction == "right" or $direction == 'down' ) {
+        border-left: 0;
+    }
+
+    @if ( $direction == 'right' or $direction == 'up' ) {
+        border-bottom: 0;
+    }
+
+    @if ( $direction == 'left' or $direction == 'down' ) {
+        border-top: 0;
+    }
+
+    @if ( $direction == 'left' or $direction == 'up' ) {
+        border-right: 0;
+    }
+
+    transform: rotate(45deg);
+}

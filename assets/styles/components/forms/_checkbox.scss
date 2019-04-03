@@ -1,0 +1,55 @@
+.Checkbox {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &-control {
+        position: absolute;
+        opacity: 0;
+    }
+
+    &-check {
+        position: relative;
+        @include size(1.5rem);
+        display: inline-block;
+        border: 1px solid $brand-primary;
+        background-color: $brand-white;
+        text-indent: -9999px;
+
+        &::before {
+            @include position(absolute, 3px);
+            content: "✓";
+            background-color: $brand-green;
+            color: $brand-white;
+            text-align: center;
+            line-height: 1.25;
+            text-indent: 0;
+            transform: scale(0);
+            transition: .2s transform $ease-in-sine;
+        }
+
+        :checked + &::before {
+            transform: scale(1)
+        }
+
+        :focus + & {
+            box-shadow: 0 0 6px rgba($brand-green, 0.5);
+        }
+
+        :disabled + & {
+            background: $brand-grey-lighter;
+            opacity: .5;
+            cursor: not-allowed;
+        }
+    }
+
+    &-label {
+        display: inline-block;
+        margin-left: .5rem;
+
+        :disabled ~ & {
+            opacity: .75;
+            cursor: not-allowed;
+        }
+    }
+}

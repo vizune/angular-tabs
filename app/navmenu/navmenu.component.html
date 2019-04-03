@@ -1,0 +1,34 @@
+<div class="Nav" tabindex="-1" [attr.aria-expanded]="expanded">
+    <ul class="Nav-list u-list-ui u-ul-unset">
+        <li *ngFor="let page of sidenav$ | async"
+            tooltip
+            [tooltipPlacement]="'right'"
+            [tooltipType]="'tooltip'"
+            [tooltipTitle]="page.name"
+            [tooltipShowCaret]="true"
+            [tooltipDisabled]="expanded">
+            <a [routerLink]="['/', page.id]"
+               [routerLinkActive]="['Nav-link--active']"
+               class="Nav-link">
+                <span class="Nav-label">{{ page.name }}</span>
+                <span class="Nav-icon Nav-icon--{{ page.id }}"></span>
+            </a>
+        </li>
+
+        <!-- TO DO: Search component - VAI-10 -->
+        <li
+            tooltip
+            [tooltipPlacement]="'right'"
+            [tooltipType]="'tooltip'"
+            [tooltipTitle]="'Search'"
+            [tooltipShowCaret]="true"
+            [tooltipDisabled]="expanded">
+            <a class="Nav-link">
+                <span class="Nav-label">Search</span>
+                <span class="Nav-icon Nav-icon--search"></span>
+            </a>
+        </li>
+    </ul>
+
+    <nav-expand (expandNav)="expandStatus($event)"></nav-expand>
+</div>

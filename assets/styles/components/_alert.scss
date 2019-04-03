@@ -1,0 +1,42 @@
+.Alert {
+    padding: .6rem 1rem;
+    background: $brand-grey-mid;
+    border-radius: .35rem;
+    color: $brand-white;
+    font-size: .85rem;
+
+    &--transparent {
+        padding: 0;
+        background: transparent;
+        color: $brand-grey-mid;
+    }
+
+    &--success {
+        background: $notice-pass;
+    }
+
+    &--danger {
+        background: $notice-fail;
+    }
+
+    &--info {
+        background: $notice-active;
+    }
+
+    &--warning {
+        background: $notice-warn;
+    }
+
+    &--centered {
+        text-align: center;
+    }
+
+    &-heading {
+        color: $brand-white;
+        font-size: 1.2rem;
+    }
+
+    &.is-hidden {
+        display: none;
+    }
+}

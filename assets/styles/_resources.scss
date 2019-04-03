@@ -1,0 +1,13 @@
+// Enable global scss variables in component sass
+// PLEASE NOTE: Variables / mixins only. Do not include anything that will be actually rendered in CSS
+
+// Tools
+@import "tools/_arrow";
+@import "tools/_zindex";
+
+// Settings
+@import "settings/_breakpoints";
+@import "settings/_dimensions";
+@import "settings/_swatches";
+@import "settings/_typography";
+@import "settings/_zindex";

@@ -1,0 +1,128 @@
+.Button {
+    background: transparent;
+    border: 1px solid $brand-grey-light;
+    border-radius: 2rem;
+    font-family: $ff-body;
+    font-size: .75rem;
+    padding: 8px 14px;
+    text-align: left;
+    transition: background .2s ease;
+
+    &:hover {
+        background: $brand-grey-light;
+    }
+
+    &--primary {
+        background: $brand-green;
+        border-color: $brand-green;
+        color: $brand-white;
+    }
+
+    &--danger {
+        background: $brand-red;
+        border-color: $brand-red;
+        color: $brand-white;
+    }
+
+    &--primary,
+    &--danger {
+        border-width: 2px;
+        transition: background .2s ease;
+
+        &:hover {
+            background: $brand-white;
+            color: $brand-black;
+        }
+    }
+
+    &[disabled] {
+        background: $brand-grey-lighter;
+        border-color: $brand-grey-lighter;
+        color: $brand-black;
+        opacity: .6;
+        cursor: not-allowed;
+    }
+
+    &-action {
+        background-color: $brand-grey;
+        border: 1px solid transparent;
+        border-radius: 100%;
+        height: 27px;
+        width: 27px;
+        padding: 0;
+        transition: background .2s ease, color .2s ease, border .2s ease;
+
+        @media (min-width: $desktop-sm) {
+            height: 24px;
+            width: 24px;
+        }
+
+        &:hover {
+            background-color: $brand-white;
+            border-color: $brand-grey;
+        }
+
+        &--transparentBg {
+            background: transparent;
+            color: $brand-grey-mid;
+            border: none;
+
+            @media (min-width: $desktop-sm) {
+                height: 20px;
+                width: 20px;
+            }
+
+            &:hover {
+                background: none;
+            }
+        }
+    }
+
+    &-actionIcon {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 70% 70%;
+        transition: filter .2s ease;
+
+        &--add {
+            background-image: url('/assets/images/ico-add.svg');
+        }
+
+        &--remove {
+            background-image: url('/assets/images/ico-subtract.svg');
+        }
+
+        &--edit {
+            background-image: url('/assets/images/ico-edit.svg');
+            filter: brightness(1.5);
+        }
+
+        &--settings {
+            background-image: url('/assets/images/ico-settings.svg');
+        }
+
+        &--arrowRight {
+            background-image: url('/assets/images/ico-arrow-right.svg');
+        }
+
+        .Button-action--transparentBg & {
+            background-size: 100% 100%;
+        }
+
+        .Button-action:hover & {
+            filter: brightness(50%);
+        }
+
+        .Button-action--transparentBg:hover & {
+            filter: brightness(0);
+        }
+
+        .Button-action--white &,
+        .Button-action--white &:hover{
+            filter: brightness(100);
+        }
+    }
+}

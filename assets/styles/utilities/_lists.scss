@@ -1,0 +1,17 @@
+.u-list-ui,
+.u-list-inline {
+  list-style: none !important;
+}
+
+.u-list-inline {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.u-list-vc {
+  align-items: center;
+}
+
+.u-list-hc {
+  justify-content: center;
+}

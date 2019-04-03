@@ -1,0 +1,18 @@
+.Page {
+    padding: 0 1.5rem;
+    position: relative;
+
+    @media(min-width: $desktop-sm) {
+        overflow-y: scroll;
+    }
+
+    &-container {
+        max-width: 1480px;
+        margin: 0 -1.5rem;
+    }
+
+    &-cell {
+        padding-left: 1.5rem;
+        padding-right: 1rem;
+    }
+}

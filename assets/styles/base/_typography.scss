@@ -1,0 +1,57 @@
+h1, h2, h3, h4, h5, h6, hgroup, p, figure, blockquote, ul, ol, dl {
+    margin-top: 0;
+    margin-bottom: 1.35rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $ff-head;
+    font-weight: $fw-head;
+    line-height: $lh-head;
+}
+
+h1 {
+    font-size: $fs-h1;
+
+    @include breakpoint($mobile-all) {
+        font-size: rem(48px);
+    }
+}
+
+h2 {
+    font-size: $fs-h2;
+}
+
+h3 {
+    font-size: $fs-h3;
+}
+
+h4 {
+    font-size: $fs-h4;
+}
+
+h5 {
+    font-size: $fs-h5;
+}
+
+h6 {
+    font-size: $fs-h6;
+}
+
+blockquote {
+    position: relative;
+    padding: 1rem;
+    margin: 1em;
+    background: rgba(0, 0, 0, 0.2);
+
+    &::before {
+        content: open-quote;
+        @include position(absolute, 0 null null -.5rem);
+        font-family: serif;
+        font-size: 4rem;
+        line-height: 0.5;
+    }
+}
+
+p {
+    font-size: .8rem;
+}

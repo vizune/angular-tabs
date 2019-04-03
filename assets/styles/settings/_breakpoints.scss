@@ -1,0 +1,7 @@
+$tablet: 660px;
+$desktop-sm: 1076px;
+$desktop: 1180px;
+$desktop-hd: 1680px;
+
+$mobile-all: max-width $tablet - 1;
+$touch: max-width $desktop - 1;

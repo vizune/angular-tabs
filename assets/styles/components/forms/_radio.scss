@@ -1,0 +1,40 @@
+.Radio {
+    display: flex;
+    align-items: center;
+
+    &-control {
+        position: absolute;
+        opacity: 0;
+    }
+
+    &-check {
+        position: relative;
+        @include size(2rem);
+        display: inline-block;
+        border-radius: 50%;
+        border: 1px solid $brand-primary;
+        background-color: $brand-white;
+        margin-left: .5rem;
+
+        @include breakpoint($desktop) {
+            @include size(1.5rem);
+        }
+
+        &::before {
+            @include position(absolute, 3px);
+            content: "";
+            border-radius: 50%;
+            background-color: $brand-green;
+            transform: scale(0);
+            transition: .3s transform $ease-in-out-sine;
+        }
+
+        :checked + &::before {
+            transform: scale(1)
+        }
+
+        :focus + & {
+            box-shadow: 0 0 6px rgba($brand-green, 0.5);
+        }
+    }
+}

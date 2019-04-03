@@ -1,0 +1,35 @@
+input {
+    border: none;
+}
+
+button,
+input,
+textarea,
+select {
+    font-family: inherit;
+    color: inherit;
+    line-height: normal;
+}
+
+button,
+[type=submit] {
+    border: 0;
+}
+
+textarea {
+    vertical-align: top;
+}
+
+::placeholder {
+    color: $brand-grey-mid;
+}
+
+:not(div):focus {
+    outline: none;
+    box-shadow: 0 0 8px 1px rgba($brand-primary, 0.5);
+}
+
+:not(div):-moz-focusring {
+    outline: none;
+    box-shadow: 0 0 8px 1px rgba($brand-primary, 0.5);
+}

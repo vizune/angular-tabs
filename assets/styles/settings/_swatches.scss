@@ -1,0 +1,40 @@
+// Brand Colours
+$brand-bg: #161618;
+$brand-bg-highlight: #333;
+
+$brand-primary: #333;
+$brand-red: #cc1027;
+$brand-secondary: $brand-red;
+$brand-green: #32cd32;
+$brand-amber: #ffa500;
+
+$brand-white: #fff;
+$brand-grey-lighter: #eee;
+$brand-grey-light: #ccc;
+$brand-grey-mid: #999; // Accessibility - Color contrast AAA pass for grey on $brand-black
+$brand-grey: #8f8f8f;
+$brand-grey-dark: #797979;
+$brand-grey-darker: $brand-bg-highlight;
+$brand-black: $brand-bg;
+
+// Informative Colours
+$notice-active: #2d77ff;
+$notice-fail: $brand-red;
+$notice-pass: $brand-green;
+$notice-warn: $brand-amber;
+$notice-info: #bc5ce4;
+
+// Social Colours
+$facebook-blue: #3b5998;
+$twitter-blue: #55acee;
+$linkedin-blue: #0077b5;
+$gplus-red: #d44c34;
+$youtube-red: #cd3a28;
+$pinterest-red: #cb2a24;
+
+// Tables
+$table-bg: transparent;
+$table-bg-accent: #f9f9f9;
+$table-bg-hover: #f5f5f5;
+$table-bg-active: $table-bg-hover;
+$table-border-color: #ddd;

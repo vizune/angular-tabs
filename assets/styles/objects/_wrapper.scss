@@ -1,0 +1,13 @@
+.Wrapper {
+    display: grid;
+
+    @media(max-width: $desktop-sm) {
+        grid-template-rows: 70px auto;
+    }
+
+    @media(min-width: $desktop-sm) {
+        grid-template-columns: min-content auto;
+        height: 100vh;
+        overflow: hidden;
+    }
+}

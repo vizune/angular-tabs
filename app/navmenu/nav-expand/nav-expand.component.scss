@@ -1,0 +1,47 @@
+@import "../../../assets/styles/_resources.scss";
+
+$icon-size: 60px;
+$icon-border: 1px solid rgba(255, 255, 255, .5);
+
+.Expand {
+    cursor: pointer;
+    transition: background .2s ease;
+    overflow: hidden;
+
+    @media(min-width: $desktop-sm) {
+        display: flex;
+        justify-content: flex-end;
+        //border-top: $icon-border;
+    }
+
+    &:hover {
+        background: $brand-red;
+    }
+
+    &:focus {
+        outline: $brand-red auto 2px;
+    }
+
+    &-icon {
+        height: $icon-size;
+        width: $icon-size;
+        background-size: 17px 17px;
+        background-position: center center;
+        background-image: url('../../../assets/images/ico-double-angle.svg');
+        background-repeat: no-repeat;
+        transform: rotate(90deg);
+        transition: transform .4s ease;
+
+        @media(min-width: $desktop-sm) {
+            transform: none;
+        }
+
+        &--collapse {
+            transform: rotate(-90deg);
+
+            @media(min-width: $desktop-sm) {
+                transform: rotate(180deg);
+            }
+        }
+    }
+}

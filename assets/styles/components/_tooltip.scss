@@ -1,0 +1,57 @@
+.Tooltip {
+    $caret-size: 12px;
+
+    position: fixed;
+    z-index: z("tooltip");
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    border-radius: .85rem;
+    background: $brand-bg-highlight;
+    font-size: .7rem;
+    color: $brand-white;
+    padding: .35rem .75rem;
+
+    @media(min-width: $desktop-sm) {
+        // Disabled for mobile
+        display: block;
+    }
+
+    &.is-active {
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 0.3s;
+    }
+
+    &-caret {
+        position: absolute;
+        z-index: 5001;
+        width: 0;
+        height: 0;
+
+        &--left {
+            border-top: $caret-size solid transparent;
+            border-bottom: $caret-size solid transparent;
+            border-left: $caret-size solid $brand-bg-highlight;
+            transform: translateX(-5px);
+        }
+
+        &--top {
+            border-left: $caret-size solid transparent;
+            border-right: $caret-size solid transparent;
+            border-top: $caret-size solid $brand-bg-highlight;
+        }
+
+        &--right {
+            border-top: $caret-size solid transparent;
+            border-bottom: $caret-size solid transparent;
+            border-right: $caret-size solid $brand-bg-highlight;
+        }
+
+        &--bottom {
+            border-left: $caret-size solid transparent;
+            border-right: $caret-size solid transparent;
+            border-bottom: $caret-size solid $brand-bg-highlight;
+        }
+    }
+}

@@ -1,0 +1,21 @@
+:root {
+    font-size: $fs-mobile;
+
+    @include breakpoint($tablet) {
+        font-size: #{calc( 14px + (20 - 14) * (100vw - 680px) / (1680 - 680) )};
+    }
+
+    @include breakpoint($desktop-hd) {
+        font-size: $fs-hd;
+    }
+}
+
+body {
+    font-family: $ff-body;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}

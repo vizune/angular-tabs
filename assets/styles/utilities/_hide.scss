@@ -1,0 +1,23 @@
+.u-hide\@desktop {
+  @include breakpoint($desktop) {
+    display: none !important;
+  }
+}
+
+.u-hide\@tablet {
+  @include breakpoint($tablet) {
+    display: none !important;
+  }
+}
+
+.u-hide\@touch {
+  @include breakpoint($touch) {
+    display: none !important;
+  }
+}
+
+.u-hide\@mobile {
+  @include breakpoint($mobile-all) {
+    display: none !important;
+  }
+}

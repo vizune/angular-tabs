@@ -1,0 +1,29 @@
+.Grid {
+    display: grid;
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+
+    &--tablet-2 {
+        @media(min-width: $tablet) {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    &--tablet-3 {
+        @media(min-width: $tablet) {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+
+    &--tablet-4 {
+        @media(min-width: $tablet) {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+    }
+
+    &--desktop-4 {
+        @media(min-width: $desktop-sm) {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+    }
+}

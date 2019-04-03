@@ -1,0 +1,16 @@
+a {
+    text-decoration: none;
+    color: inherit;
+
+    &:not([class]) {
+        color: inherit;
+        border-bottom: 1px solid;
+        border-color: inherit;
+        padding-bottom: 1px;
+
+        &:hover {
+            padding-bottom: 0;
+            border-width: 2px;
+        }
+    }
+}

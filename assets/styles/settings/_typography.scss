@@ -1,0 +1,47 @@
+@font-face {
+    font-family: "Montserrat Regular";
+    font-weight: 100;
+    src: url("/assets/fonts/Montserrat-Regular.woff") format("woff"), url("/assetsfonts/Montserrat-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Montserrat Hairline";
+    font-weight: 100;
+    src: url("/assets/fonts/montserrat-hairline.woff") format("woff2"), url("/assets/fonts/montserrat-hairline.woff") format("woff"), url("/assetsfonts/montserrat-hairline.ttf") format("truetype");
+}
+
+
+$system-fonts: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,Cantarell,'Open Sans','Helvetica Neue',sans-serif;
+$ff-head: "Montserrat Hairline", $system-fonts;
+$ff-body: "Montserrat Regular", $system-fonts;
+$ff-icon: 'icons';
+$ff-basic: Arial, sans-serif;
+
+$fs-base: 16px;
+$fs-hd: 20px;
+$fs-tablet: 14px;
+$fs-mobile: 16px;
+
+
+$modularscale: (
+base: .85em
+);
+
+$fs-h1: ms(4);
+$fs-h2: ms(3);
+$fs-h3: ms(2);
+$fs-h4: ms(1);
+$fs-h5: ms(1);
+$fs-h6: ms(1);
+
+$fs-small: 12px;
+$fs-tiny: 8px;
+$fs-menu: 24px;
+
+$fw-base: 400;
+$fw-thin: 100;
+$fw-bold: 600;
+$fw-head: $fw-thin;
+
+$lh-base: 1.6;
+$lh-head: 1.2;
